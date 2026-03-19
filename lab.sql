@@ -8,7 +8,7 @@ CREATE TABLE posts (
     id INT PRIMARY KEY AUTO_INCREMENT,
     author_id INT,
     title VARCHAR(255) NOT NULL,
-    word_count INT CHECK(word_count>=100),
+    word_count INT CHECK(word_count>=0),
     views INT,
     FOREIGN KEY (author_id) REFERENCES authors(id)
 );
